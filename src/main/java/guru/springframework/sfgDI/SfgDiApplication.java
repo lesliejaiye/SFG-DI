@@ -8,6 +8,7 @@ import guru.springframework.sfgDI.controllers.ConstructorInjectedController;
 import guru.springframework.sfgDI.controllers.MyController;
 import guru.springframework.sfgDI.controllers.PropertyInjectedController;
 import guru.springframework.sfgDI.controllers.SetterInjectedController;
+import guru.springframework.sfgDI.controllers.I18nController;
 
 @SpringBootApplication
 public class SfgDiApplication {
@@ -17,6 +18,11 @@ public class SfgDiApplication {
 		/*Defines Spring Context */
 		ApplicationContext ctx = SpringApplication.run(SfgDiApplication.class, args);
 		
+		//Profile Bean Example
+		I18nController i18nController = (I18nController) ctx.getBean("i18nController");
+		System.out.println(i18nController.sayHello());
+
+
 		/*Asking Spring to provide an isntance of the Spring Context BEAN */
 		/*Notice 'new' is not here to define object, Spring framewrok assumes 'new' underneath */
 		MyController myController = (MyController) ctx.getBean("myController");
