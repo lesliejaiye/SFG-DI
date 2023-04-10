@@ -22,26 +22,21 @@ public class SfgDiApplication {
 		MyController myController = (MyController) ctx.getBean("myController");
 
 		/*Use object to execute method, set to variable */
-		String greeting = myController.sayHello();
+		// String greeting = myController.sayHello();
 
-		System.out.println(greeting);
+		System.out.println("-----Primary Bean");
+		System.out.println(myController.sayHello());
 
 		System.out.println("-----Property");
-		
 		PropertyInjectedController propertyInjectedController = (PropertyInjectedController) ctx.getBean("propertyInjectedController");
-		
 		System.out.println(propertyInjectedController.getGreeting());
-
+		
 		System.out.println("-----Setter");
-
 		SetterInjectedController setterinjectedcontroller = (SetterInjectedController) ctx.getBean("setterInjectedController");
-
 		System.out.println(setterinjectedcontroller.getGreeting());
 
 		System.out.println("-----Constructor");
-
 		ConstructorInjectedController constructorInjectedController = (ConstructorInjectedController) ctx.getBean("constructorInjectedController");
-
 		System.out.println(constructorInjectedController.getGreeting());
 
 	}
