@@ -5,9 +5,9 @@ import org.springframework.stereotype.Service;
 /*tells Spring to bring an instance of this into context within the Controller */
 @Service
 
-public class GreetingServiceImpl implements GreetingService{
+public class ConstructorGreetingService implements GreetingService{
     @Override
     public String sayGreeting() {
-        return "HelloWorld";  
+        return "HelloWorld - Contructor";  
     }
 }

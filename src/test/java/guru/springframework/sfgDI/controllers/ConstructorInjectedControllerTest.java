@@ -3,7 +3,7 @@ package guru.springframework.sfgDI.controllers;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import guru.springframework.sfgDI.services.GreetingServiceImpl;
+import guru.springframework.sfgDI.services.ConstructorGreetingService;
 
 class ConstructorInjectedControllerTest {
     
@@ -17,7 +17,7 @@ class ConstructorInjectedControllerTest {
         /*Creates a new constuctor injected [controller] object 
          * while also creating an object from the [greetings service]
          */
-        controller = new ConstructorInjectedController(new GreetingServiceImpl());
+        controller = new ConstructorInjectedController(new ConstructorGreetingService());
     }
 
     @Test

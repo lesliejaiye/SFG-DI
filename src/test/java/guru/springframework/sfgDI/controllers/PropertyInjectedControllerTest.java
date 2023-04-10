@@ -1,6 +1,6 @@
 package guru.springframework.sfgDI.controllers;
 
-import guru.springframework.sfgDI.services.GreetingServiceImpl;
+import guru.springframework.sfgDI.services.ConstructorGreetingService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -24,7 +24,7 @@ class PropertyInjectedControllerTest {
          REFRENCING object calling GreetingService script
          
          */
-        controller.greetingService = new GreetingServiceImpl();
+        controller.greetingService = new ConstructorGreetingService();
     }
         /*Uses the defined controller to call getGreeting method from Controller  */
     @Test 
